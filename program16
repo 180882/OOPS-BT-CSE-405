@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class point
+{
+	public:
+		int a,b;
+	point operator +(point a1)
+	{
+		point a3;
+		a3.a = a+a1.a;
+		a3.b = b+a1.b;
+		return a3;
+	}
+};
+int main()
+{
+	point a1,a2,a3;
+	cout<<"enter first point:";
+	cin>>a1.a >>a2.b;
+	cout<<"enter second point:";
+	cin>>a2.a >>a2.b;
+	a3=a1+a2;
+	cout<<"points are:-("<<a3.a<<","<<a3.b<<")";
+}
