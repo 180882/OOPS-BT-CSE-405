@@ -1,0 +1,45 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+class name
+{
+	char first_name[22];
+	char middle_name[22];
+	char last_name[22];
+	public:
+		name(name &t)
+		{
+			strcpy(first_name,t.first_name);
+			strcpy(middle_name,t.middle_name);
+			strcpy(last_name,t.last_name);
+			cout<<"n\n## copy constructor called ##\n\n"<<endl;
+		}
+		name(char first[22],char middle[22],char last[22])
+		{
+			strcpy(first_name,first);
+			strcpy(middle_name,middle);
+			strcpy(last_name,last);
+			cout<<"\n\n## parametrized constructor called ##\n\n"<<endl;
+		}
+		void show(void)
+		{
+			cout<<"first name -"<<first_name<<endl;
+			cout<<"middle name -"<<middle_name<<endl;
+			cout<<"last name -"<<last_name<<endl;
+		}
+};
+int main()
+{
+	char first[22],middle[22],last[22];
+	cout<<"enter first name"<<endl;
+	cin>>first;
+	cout<<"enter middle name"<<endl;
+	cin>>middle;
+	cout<<"enter last name"<<endl;
+	cin>>last;
+	name t1(first,middle,last);
+	t1.show();
+	name t2=t1;
+	t2.show();
+	return 0;
+}
