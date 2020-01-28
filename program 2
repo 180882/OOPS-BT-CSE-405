@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class square
+{
+	int x;
+	public:
+		void getdata(void)
+		{
+			cout<<"\n\n  enter value of x  \n\n"<<endl;
+			cin>>x;
+		}
+		inline int squared(void)
+		{
+			return x*x;
+		}
+};
+int main()
+{
+	int res;
+	square t;
+	t.getdata();
+	res=t.squared();
+	cout<<"result ="<<res<<endl;
+	return 0;
+}
+	
