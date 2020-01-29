@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+void getarray(int m[8][8],int x,int y);
+int main()
+{
+	int m[8][8],n,o,p,q;
+	cout<<"enter the value of n and o:";
+	cin>>n>>o;
+	getarray(m,n,o);
+	cout<<endl;
+	cout<<"yuo entered folloing matrix"<<endl;
+	for(p=0;p<n;p++)
+	{
+		for(q=0;q<o;q++)
+		{
+			cout<<m[p][q]<<"\t";
+		}
+		cout<<endl;
+	}
+	return 0;
+}
+void getarray(int m[8][8],int x,int y)
+{
+	int p,q;
+	for(p=0;p<x;p++)
+	{
+		for(q=0;q<y;q++)
+		{
+			cin>>m[p][q];
+		}
+	}
+	
+}
