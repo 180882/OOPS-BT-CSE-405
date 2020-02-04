@@ -1,33 +1,53 @@
 #include<iostream>
 using namespace std;
-void getarray(int m[8][8],int x,int y);
+class matrix
+{
+	int m,n;
+	int **a;
+	public:
+		matrix(int m,int n)
+		{
+			this->m=m;
+			this->n=n;
+			a=new int *[m];
+			for(int i=0;i<m;i++)
+			{
+				a[i]=new int[n];
+				for(int j=0;j<n;j++)
+				a[i][j]=8;
+			}
+		}
+		void set_matrix()
+		{
+			for(int i=0;i<m;i++)
+			{
+				for(int j=0;j<n;j++)
+				cin>>a[i][j];
+			}
+	    }
+		void display()
+		{
+			for(int i=0;i<m;i++)
+			{
+				for(int j=0;j<n;j++)
+				{
+					cout<<a[i][j]<<"  ";
+				}
+				cout<<endl;
+			}
+		}
+};
 int main()
 {
-	int m[8][8],n,o,p,q;
-	cout<<"enter the value of n and o:";
-	cin>>n>>o;
-	getarray(m,n,o);
-	cout<<endl;
-	cout<<"yuo entered folloing matrix"<<endl;
-	for(p=0;p<n;p++)
-	{
-		for(q=0;q<o;q++)
-		{
-			cout<<m[p][q]<<"\t";
-		}
-		cout<<endl;
-	}
+	int m,n;
+	cout<<"enter no of row and columns:";
+	cin>>m>>n;
+	matrix obj(m,n);
+	cout<<"default matrix is:"<<endl;
+	obj.display();
+	cout<<"enter elements of marrix\n";
+	obj.set_matrix();
+	cout<<"matrix you entered is:\n";
+	obj.display();
 	return 0;
-}
-void getarray(int m[8][8],int x,int y)
-{
-	int p,q;
-	for(p=0;p<x;p++)
-	{
-		for(q=0;q<y;q++)
-		{
-			cin>>m[p][q];
-		}
-	}
-	
 }
