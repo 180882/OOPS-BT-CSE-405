@@ -1,0 +1,35 @@
+// PROGRMAM TO FIND GREATEST OF THREE NUMBER USING FUNCTIONS//
+
+#include<iostream>
+using namespace std;
+class store
+{
+	protected:
+		int a,b,c;
+		public:
+			void getval()
+			{
+				cout<<"enter value of a,b and c:"<<endl;
+				cin>>a>>b>>c;
+			}
+			void greatest()
+			{
+				if(a>b&&a>c)
+				{
+					cout<<"greatest no is:"<<a<<endl;
+				}
+				if(b>a&&b>c)
+				{
+					cout<<"greatest no is:"<<b<<endl;
+				}
+				else if (c>a&&c>b)
+				cout<<"greatest no is:"<<c<<endl;
+			}
+};
+int main()
+{
+	store s;
+	s.getval();
+	s.greatest();
+	return 0;
+}
