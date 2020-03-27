@@ -1,0 +1,31 @@
+//sum of teo number using function//
+
+#include<iostream>
+using namespace std;
+class student
+{
+	int a,b;
+	public:
+		void getdata()
+		{
+			cout<<"enter two no:"<<endl;
+			cin>>a>>b;
+		}
+		int sum(int a,int b)
+		{
+			return(a+b);
+		}
+		void display()
+		{
+			cout<<"sum of given no is:"<<a+b<<endl;
+		}
+};
+int main()
+{
+	student s;
+	int a,b;
+	s.getdata();
+	s.sum(a,b);
+	s.display();
+	return 0;
+}
