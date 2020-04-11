@@ -1,0 +1,34 @@
+//program to display the elements of array//
+
+#include<iostream>
+using namespace std;
+class Result
+{
+	protected:
+		int  s,i,arr[100];
+		public:
+			void get_val()
+			{
+				cout<<"enter the size of array: "<<endl;
+				cin>>s;
+				cout<<"enter the elements of array : "<<endl;
+				for(i=0;i<s;i++)
+				{
+					cin>>arr[i];
+				}
+			}
+				void display()
+				{
+					cout<<"array is : ";
+				for(i=0;i<s;i++)
+				cout<<" "<<arr[i];	
+				}
+};
+int main()
+{
+	Result r;
+	r.get_val();
+	r.display();
+	return 0;
+	
+}
