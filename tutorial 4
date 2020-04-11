@@ -1,0 +1,29 @@
+//program to check whether number is odd or even//
+
+#include<iostream>
+using namespace std;
+class Compare
+{  protected:
+ 	int n;
+ public:
+ 	void get_data()
+ 	{
+ 		cout<<"enter value of n: "<<endl;
+ 		cin>>n;
+	 }
+	 int find()
+	 {
+	 	if(n%2==0)
+	 		cout<<"  "<<n<<" is even number"<<endl;
+		 else 
+		 cout<<" "<<n<<" is odd number"<<endl;
+		 return 0;
+	 }
+};
+int main()
+{ int n;
+	Compare c;
+	c.get_data();
+	c.find();
+	return 0;
+}
