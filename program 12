@@ -1,0 +1,56 @@
+// multiple inheritance // 
+
+#include<iostream>
+using namespace std;
+class start
+{ 	int r;
+	public:
+		void getr(int x)
+		{
+		r=x;	
+		}
+		int putr()
+		{
+			 return r;
+		}
+};
+class mid
+{
+int s;
+public:
+   void gets(int y)	
+   {
+   	s=y;
+   }
+   int putq()
+   {
+   	return s;
+   } 
+};
+class final : public start , public mid
+{
+	public:
+		int w;
+		int result()
+		{
+			w=(putr()+putq());
+			return w;
+		}
+		void display()
+		{
+			cout<<"total marks are : "<<result()<<endl;
+		}
+};
+int main()
+{
+	final e;
+	int x,y;
+	cout<<"enter marks of internal 1 : "<<endl;
+	cin>>x;
+	cout<<"enter marks of internal 2 : "<<endl;
+	cin>>y;
+	e.getr(x);
+	e.gets(y);
+	e.display();
+	return 0;
+}
