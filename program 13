@@ -1,0 +1,64 @@
+//multilevel inheritance //
+
+#include<iostream>
+using namespace std;
+class begin
+{ 	int a;
+	public:
+		void getdata(int x)
+		{
+			a=x;
+		}
+		int putdata()
+		{
+		return a;
+		}	
+};
+class middle:public begin
+{ int b;
+	public: 
+	int c;
+	void getval(int y)
+	{ 
+	b=y;
+	}
+	int putval()
+	{
+		return b;
+	}
+	int multiply()
+	{
+	c= putdata();
+	c=c*b;
+		return c;
+	} 
+	void display()
+	{
+		cout<<"value of multiply is : "<<multiply()<<endl;
+	}
+};
+class end:public middle
+{
+	public: int r;
+			void sum()
+			{  
+				r=putdata()+putval();
+			} 
+			void displayr()
+			{
+				cout<<"value of sum of a and b is: "<<r<<endl;
+			}
+};
+int  main()
+{ int a,b;
+	end m;
+	cout<<"enter value of  a and b : "<<endl;
+	cin>>a>>b; 
+	m.getdata(a);
+	m.getval(b);
+	m.multiply();
+	m.display();
+	m.sum();
+	m.displayr();
+	return 0;
+}
